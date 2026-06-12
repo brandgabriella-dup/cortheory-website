@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — CorTheory</title>
+  <meta name="description" content="Secure checkout for CorTheory peptides." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/work-with-us.css" />
+  <link rel="stylesheet" href="assets/css/checkout.css" />
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/images/logo-black.png" alt="CorTheory" />
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html#products">Shop</a></li>
+      <li><a href="index.html#coas">COA's</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="work-with-us.html">Partner Program</a></li>
+    </ul>
+    <div class="nav__right">
+      <!-- Person icon -->
+      <button class="nav__icon" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </button>
+      <!-- Cart icon -->
+      <button class="nav__icon" id="cartOpen" aria-label="Cart" data-cart>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+      </button>
+      <a href="index.html#products" class="btn btn-dark">Shop All</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="nav__mobile" id="mobileNav">
+  <a href="index.html#products">Shop</a>
+  <a href="index.html#coas">COA's</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="work-with-us.html">Partner Program</a>
+  <a href="index.html#products">Shop All</a>
+</div>
+
+<!-- ══ CHECKOUT PAGE ═════════════════════════════════════ -->
+<main class="checkout">
+  <div class="container">
+    <div class="checkout__header">
+      <h1 class="checkout__title">Complete Your Order</h1>
+      <p class="checkout__subtitle">Secure payment via EFT transfer</p>
+    </div>
+
+    <div class="checkout__wrapper">
+      <!-- LEFT COLUMN: FORM -->
+      <div class="checkout__left">
+
+        <!-- Contact Info Section -->
+        <section class="checkout__section">
+          <h2 class="checkout__section-title">Contact Information</h2>
+          <div class="checkout__form-group">
+            <label for="fullName" class="checkout__label">Full Name</label>
+            <input type="text" id="fullName" class="checkout__input" placeholder="Enter your full name" required />
+          </div>
+          <div class="checkout__form-group">
+            <label for="email" class="checkout__label">Email Address</label>
+            <input type="email" id="email" class="checkout__input" placeholder="Enter your email" required />
+          </div>
+          <div class="checkout__form-group">
+            <label for="phone" class="checkout__label">Phone / WhatsApp</label>
+            <input type="tel" id="phone" class="checkout__input" placeholder="+27 (0)..." required />
+          </div>
+        </section>
+
+        <!-- Shipping Address Section -->
+        <section class="checkout__section">
+          <h2 class="checkout__section-title">Shipping Address</h2>
+          <div class="checkout__form-group">
+            <label for="address1" class="checkout__label">Address Line 1</label>
+            <input type="text" id="address1" class="checkout__input" placeholder="Street address" required />
+          </div>
+          <div class="checkout__form-group">
+            <label for="address2" class="checkout__label">Address Line 2 <span class="checkout__optional">(optional)</span></label>
+            <input type="text" id="address2" class="checkout__input" placeholder="Apartment, suite, etc. (optional)" />
+          </div>
+          <div class="checkout__form-group">
+            <label for="city" class="checkout__label">City / Town</label>
+            <input type="text" id="city" class="checkout__input" placeholder="Your city" required />
+          </div>
+          <div class="checkout__form-group">
+            <label for="province" class="checkout__label">Province</label>
+            <select id="province" class="checkout__input" required>
+              <option value="">Select a province...</option>
+              <option value="Eastern Cape">Eastern Cape</option>
+              <option value="Free State">Free State</option>
+              <option value="Gauteng">Gauteng</option>
+              <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+              <option value="Limpopo">Limpopo</option>
+              <option value="Mpumalanga">Mpumalanga</option>
+              <option value="Northern Cape">Northern Cape</option>
+              <option value="North West">North West</option>
+              <option value="Western Cape">Western Cape</option>
+            </select>
+          </div>
+          <div class="checkout__form-group">
+            <label for="postalCode" class="checkout__label">Postal Code</label>
+            <input type="text" id="postalCode" class="checkout__input" placeholder="Your postal code" required />
+          </div>
+        </section>
+
+        <!-- Order Notes Section -->
+        <section class="checkout__section">
+          <h2 class="checkout__section-title">Order Notes</h2>
+          <div class="checkout__form-group">
+            <label for="notes" class="checkout__label">Special Instructions <span class="checkout__optional">(optional)</span></label>
+            <textarea id="notes" class="checkout__textarea" placeholder="Any special instructions for your order..." rows="4"></textarea>
+          </div>
+        </section>
+
+        <!-- WhatsApp Community Card -->
+        <div class="checkout__whatsapp-card">
+          <h3 class="checkout__whatsapp-title">Join the CorTheory Community</h3>
+          <p class="checkout__whatsapp-text">Connect with fellow researchers, share insights, and get exclusive updates on new compounds and research.</p>
+          <a href="https://chat.whatsapp.com/JgqbexB6z4kGSysNtLB7HE?mode=gi_t" target="_blank" rel="noopener noreferrer" class="checkout__whatsapp-btn">
+            Join Our Group
+          </a>
+        </div>
+
+        <!-- Place Order Button -->
+        <button id="placeOrderBtn" class="checkout__place-order-btn">
+          Place Order
+        </button>
+      </div>
+
+      <!-- RIGHT COLUMN: ORDER SUMMARY -->
+      <div class="checkout__right">
+        <div class="checkout__summary">
+          <h2 class="checkout__summary-title">Order Summary</h2>
+
+          <!-- Items List -->
+          <div class="checkout__summary-items" id="summaryItems">
+            <!-- Items will be populated by JavaScript -->
+          </div>
+
+          <!-- Totals -->
+          <div class="checkout__summary-totals">
+            <div class="checkout__summary-row">
+              <span>Subtotal</span>
+              <span id="summarySubtotal">R 0.00</span>
+            </div>
+            <div class="checkout__summary-row">
+              <span>Shipping</span>
+              <span id="summaryShipping">R 150.00</span>
+            </div>
+            <div class="checkout__summary-row checkout__summary-row--total">
+              <span>Total</span>
+              <span id="summaryTotal">R 150.00</span>
+            </div>
+          </div>
+
+          <!-- EFT Payment Details -->
+          <div class="checkout__eft-card">
+            <h3 class="checkout__eft-title">EFT Payment Details</h3>
+            <div class="checkout__eft-detail">
+              <span class="checkout__eft-label">Bank</span>
+              <span class="checkout__eft-value" id="eftBank">Standard Bank</span>
+            </div>
+            <div class="checkout__eft-detail">
+              <span class="checkout__eft-label">Account Name</span>
+              <span class="checkout__eft-value">CorTheory</span>
+            </div>
+            <div class="checkout__eft-detail">
+              <span class="checkout__eft-label">Account Number</span>
+              <span class="checkout__eft-value" id="eftAccount">071502041</span>
+            </div>
+            <div class="checkout__eft-detail">
+              <span class="checkout__eft-label">Branch Code</span>
+              <span class="checkout__eft-value" id="eftBranch">051001</span>
+            </div>
+            <div class="checkout__eft-detail">
+              <span class="checkout__eft-label">Reference</span>
+              <span class="checkout__eft-value" id="eftReference">CT-[Order ID]</span>
+            </div>
+          </div>
+
+          <p class="checkout__eft-note">Please use your order ID as payment reference. Order will be dispatched within 2-3 business days of payment confirmation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Success Modal -->
+<div class="checkout__modal" id="successModal" style="display: none;">
+  <div class="checkout__modal-content">
+    <div class="checkout__modal-close" id="modalClose">&times;</div>
+    <div class="checkout__modal-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <h2 class="checkout__modal-title">Order Confirmed!</h2>
+    <p class="checkout__modal-text">Your order has been received and is awaiting payment confirmation.</p>
+    <div class="checkout__modal-order-id">
+      Order ID: <strong id="modalOrderId"></strong>
+    </div>
+    <p class="checkout__modal-instructions">Use the order ID above as your payment reference when making the EFT transfer. You'll receive a confirmation email once payment is received.</p>
+    <a href="index.html" class="checkout__modal-btn">Continue Shopping</a>
+  </div>
+</div>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer class="footer" id="contact">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/images/cor logo white copy.png" alt="CorTheory" />
+        <p class="footer__tagline">
+          Premium research-grade peptides.<br>
+          Engineered for precision.<br>
+          Verified for absolute purity.
+        </p>
+      </div>
+      <div>
+        <p class="footer__col-head">Shop</p>
+        <ul class="footer__links">
+          <li><a href="index.html#products">All Products</a></li>
+          <li><a href="index.html#products">AOD</a></li>
+          <li><a href="index.html#products">BPC-157</a></li>
+          <li><a href="index.html#products">MOTS-C</a></li>
+          <li><a href="index.html#products">RETA</a></li>
+          <li><a href="index.html#products">TB-500</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-head">Resources</p>
+        <ul class="footer__links" id="coas">
+          <li><a href="#">Research Library</a></li>
+          <li><a href="#">Certificates of Analysis</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-head">Legal</p>
+        <ul class="footer__links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Research Use Only</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-head" id="partners">Support</p>
+        <ul class="footer__links">
+          <li><a href="#">Support &amp; Contact</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 CorTheory. Southern Africa. Research Use Only.</p>
+      <div class="footer__legal-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__watermark">
+    <div style="font-size: 180px; font-weight: 900; color: #2A3D2E; opacity: 0.3; text-align: center; overflow: hidden; line-height: 1; font-family: 'Playfair Display', Georgia, serif; letter-spacing: -0.04em; user-select: none; pointer-events: none;">CorTheory</div>
+  </div>
+</footer>
+
+<!-- ══ CART DRAWER ═══════════════════════════════════════════ -->
+<div class="overlay" id="overlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer__head">
+    <h2 class="cart-drawer__title">Your Cart</h2>
+    <button class="cart-drawer__close" id="cartClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="cart-drawer__body">
+    <!-- Shipping progress bar -->
+    <div class="cart-drawer__shipping-progress">
+      <div class="cart-drawer__progress-label">FREE SHIPPING OVER R1500</div>
+      <div class="cart-drawer__progress-bar">
+        <div class="cart-drawer__progress-fill" id="progressFill" style="width: 0%"></div>
+      </div>
+      <div class="cart-drawer__progress-text" id="progressText">R1500 away</div>
+    </div>
+
+    <!-- Cart items list -->
+    <div class="cart-drawer__items" id="cartItems">
+      <div class="cart-empty">
+        <svg class="cart-empty__icon" viewBox="0 0 40 40" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 3.5L5 10v23.5a3.5 3.5 0 003.5 3.5h23a3.5 3.5 0 003.5-3.5V10l-5-6.5z"/>
+          <line x1="5" y1="10" x2="35" y2="10"/>
+          <path d="M26.5 17a6.5 6.5 0 01-13 0"/>
+        </svg>
+        <p>Your cart is empty. Add compounds from the catalog to begin your research.</p>
+      </div>
+    </div>
+
+    <!-- Recommendations section -->
+    <div class="cart-drawer__recommendations-section" id="recommendationsSection" style="display: none;">
+      <div class="cart-drawer__divider"></div>
+      <h3 class="cart-drawer__recommendations-title">ADD TO YOUR RESEARCH</h3>
+      <div class="cart-drawer__recommendations" id="cartRecommendations"></div>
+    </div>
+
+    <!-- Totals section -->
+    <div class="cart-drawer__totals-section" id="totalsSection" style="display: none;">
+      <div class="cart-drawer__divider"></div>
+      <div class="cart-drawer__totals">
+        <div class="cart-drawer__total-row">
+          <span>Subtotal</span>
+          <span id="subtotalValue">R 0.00</span>
+        </div>
+        <div class="cart-drawer__total-row">
+          <span>Shipping</span>
+          <span id="shippingValue">R 150.00</span>
+        </div>
+        <div class="cart-drawer__total-row cart-drawer__total-row--total">
+          <span>Total</span>
+          <span id="totalValue">R 150.00</span>
+        </div>
+      </div>
+
+      <a href="checkout.html" class="cart-drawer__checkout-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v4"></path>
+        </svg>
+        SECURE CHECKOUT
+      </a>
+
+      <p class="cart-drawer__terms">
+        By placing your order you agree to our <a href="#">Terms of Service</a>. Payment via EFT. Order confirmed on receipt of payment.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/checkout.js"></script>
+</body>
+</html>
