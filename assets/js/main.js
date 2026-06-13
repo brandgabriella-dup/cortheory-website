@@ -69,36 +69,17 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // ── CART MANAGEMENT SYSTEM ────────────────────────────────────
 // All cart functionality has been moved to cart.js
 
-// ── PARTNER MODAL ─────────────────────────────────────────────
-const partnerModal = document.getElementById('partnerModal');
-const partnerModalOverlay = document.getElementById('partnerModalOverlay');
-const partnerFormBtn = document.getElementById('partnerFormBtn');
-const footerPartnerBtn = document.getElementById('footerPartnerBtn');
-const partnerModalClose = document.getElementById('partnerModalClose');
-const partnerForm = document.getElementById('partnerForm');
-
-function openPartnerModal() {
-  partnerModal.classList.add('open');
-  partnerModalOverlay.classList.add('open');
+// ── PARTNER FORM (Footer) ─────────────────────────────────────
+const partnerForm = document.querySelector('.footer__partner-form');
+if (partnerForm) {
+  partnerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const inputs = partnerForm.querySelectorAll('input');
+    const name = inputs[0].value;
+    const email = inputs[1].value;
+    const phone = inputs[2].value;
+    console.log('Partner Application:', { name, email, phone });
+    alert(`Thank you ${name}! We'll contact you at ${email} soon.`);
+    partnerForm.reset();
+  });
 }
-
-function closePartnerModal() {
-  partnerModal.classList.remove('open');
-  partnerModalOverlay.classList.remove('open');
-}
-
-partnerFormBtn.addEventListener('click', openPartnerModal);
-if (footerPartnerBtn) footerPartnerBtn.addEventListener('click', (e) => { e.preventDefault(); openPartnerModal(); });
-partnerModalClose.addEventListener('click', closePartnerModal);
-partnerModalOverlay.addEventListener('click', closePartnerModal);
-
-partnerForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.getElementById('partnerName').value;
-  const email = document.getElementById('partnerEmail').value;
-  const phone = document.getElementById('partnerPhone').value;
-  console.log('Partner Application:', { name, email, phone });
-  alert(`Thank you ${name}! We'll contact you at ${email} soon.`);
-  partnerForm.reset();
-  closePartnerModal();
-});

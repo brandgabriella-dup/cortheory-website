@@ -519,40 +519,31 @@
         <a href="#">Disclaimer</a>
       </div>
     </div>
+
+    <!-- Partner Form Section -->
+    <div class="footer__partner">
+      <h3 class="footer__partner-title">Become a Partner</h3>
+      <p class="footer__partner-subtitle">Help researchers access verified compounds. We'll be in touch shortly.</p>
+
+      <form class="footer__partner-form" id="partnerForm">
+        <div class="footer__partner-group">
+          <input type="text" id="partnerName" name="name" placeholder="Full Name" required />
+        </div>
+        <div class="footer__partner-group">
+          <input type="email" id="partnerEmail" name="email" placeholder="Email Address" required />
+        </div>
+        <div class="footer__partner-group">
+          <input type="tel" id="partnerPhone" name="phone" placeholder="Phone Number" required />
+        </div>
+        <button type="submit" class="btn btn-dark">Submit Application</button>
+      </form>
+    </div>
   </div>
+
   <div class="footer__watermark">
     <div style="font-size: 180px; font-weight: 900; color: #2A3D2E; opacity: 0.3; text-align: center; overflow: hidden; line-height: 1; font-family: 'Playfair Display', Georgia, serif; letter-spacing: -0.04em; user-select: none; pointer-events: none;">CorTheory</div>
   </div>
 </footer>
-
-<!-- ══ PARTNER MODAL ═════════════════════════════════════════ -->
-<div class="partner-modal-overlay" id="partnerModalOverlay"></div>
-<div class="partner-modal" id="partnerModal">
-  <button class="partner-modal__close" id="partnerModalClose">×</button>
-  <div class="partner-modal__content">
-    <h2 class="partner-modal__title">Become a Partner</h2>
-    <p class="partner-modal__subtitle">Help researchers access verified compounds. We'll be in touch shortly.</p>
-
-    <form class="partner-form" id="partnerForm">
-      <div class="partner-form__group">
-        <label for="partnerName">Full Name</label>
-        <input type="text" id="partnerName" name="name" required />
-      </div>
-
-      <div class="partner-form__group">
-        <label for="partnerEmail">Email Address</label>
-        <input type="email" id="partnerEmail" name="email" required />
-      </div>
-
-      <div class="partner-form__group">
-        <label for="partnerPhone">Phone Number</label>
-        <input type="tel" id="partnerPhone" name="phone" required />
-      </div>
-
-      <button type="submit" class="btn btn-dark partner-form__btn">Submit Application</button>
-    </form>
-  </div>
-</div>
 
 <!-- ══ CART DRAWER ═══════════════════════════════════════════ -->
 <div class="cart-overlay" id="cartOverlay"></div>
