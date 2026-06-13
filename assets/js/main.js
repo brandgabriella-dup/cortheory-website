@@ -69,6 +69,48 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // ── CART MANAGEMENT SYSTEM ────────────────────────────────────
 // All cart functionality has been moved to cart.js
 
+// ── CONTACT FORM MODAL ───────────────────────────────────────
+const contactBtn = document.getElementById('contactBtn');
+const contactModal = document.getElementById('contactModal');
+const contactModalOverlay = document.getElementById('contactModalOverlay');
+const contactModalClose = document.getElementById('contactModalClose');
+const contactForm = document.getElementById('contactForm');
+const contactSuccess = document.getElementById('contactSuccess');
+
+function openContactModal() {
+  contactModal.classList.add('open');
+  contactModalOverlay.classList.add('open');
+}
+
+function closeContactModal() {
+  contactModal.classList.remove('open');
+  contactModalOverlay.classList.remove('open');
+  contactSuccess.style.display = 'none';
+  contactForm.style.display = 'block';
+  contactForm.reset();
+}
+
+contactBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  openContactModal();
+});
+
+contactModalClose.addEventListener('click', closeContactModal);
+contactModalOverlay.addEventListener('click', closeContactModal);
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('contactName').value;
+  const email = document.getElementById('contactEmail').value;
+  const message = document.getElementById('contactMessage').value;
+
+  console.log('Contact Form Submission:', { name, email, message });
+
+  // Show success message
+  contactForm.style.display = 'none';
+  contactSuccess.style.display = 'block';
+});
+
 // ── PARTNER FORM (Footer) ─────────────────────────────────────
 const partnerForm = document.querySelector('.footer__partner-form');
 if (partnerForm) {

@@ -20,9 +20,9 @@
       <img src="assets/images/logo-black.png" alt="CorTheory" />
     </a>
     <ul class="nav__links">
-      <li><a href="#products">Shop</a></li>
+      <li><a href="shop.html">Shop</a></li>
       <li><a href="#coas">COA's</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" id="contactBtn">Contact</a></li>
       <li><a href="#partners">Partner Program</a></li>
     </ul>
     <div class="nav__right">
@@ -41,7 +41,7 @@
           <path d="M16 10a4 4 0 01-8 0"/>
         </svg>
       </button>
-      <a href="#products" class="btn btn-dark">Shop All</a>
+      <a href="shop.html" class="btn btn-dark">Shop All</a>
       <button class="nav__hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -463,6 +463,41 @@
   </div>
 </div>
 
+<!-- ══ CONTACT FORM MODAL ════════════════════════════════════ -->
+<div class="contact-modal-overlay" id="contactModalOverlay"></div>
+<div class="contact-modal" id="contactModal">
+  <button class="contact-modal__close" id="contactModalClose">×</button>
+  <div class="contact-modal__content">
+    <h2 class="contact-modal__title">Get in Touch</h2>
+    <p class="contact-modal__subtitle">Send us a message and we'll respond as soon as possible.</p>
+
+    <form class="contact-form" id="contactForm">
+      <div class="contact-form__group">
+        <label for="contactName">Full Name</label>
+        <input type="text" id="contactName" name="name" required />
+      </div>
+
+      <div class="contact-form__group">
+        <label for="contactEmail">Email Address</label>
+        <input type="email" id="contactEmail" name="email" required />
+      </div>
+
+      <div class="contact-form__group">
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-dark contact-form__btn">Send Message</button>
+    </form>
+
+    <div class="contact-modal__success" id="contactSuccess" style="display: none; text-align: center; padding: 40px 0;">
+      <h3 style="font-size: 20px; margin-bottom: 12px; color: var(--dark);">Thank you for reaching out!</h3>
+      <p style="color: var(--muted); margin-bottom: 24px;">We will be in contact as soon as possible!</p>
+      <button class="btn btn-dark" onclick="document.getElementById('contactModal').classList.remove('open'); document.getElementById('contactModalOverlay').classList.remove('open');">Close</button>
+    </div>
+  </div>
+</div>
+
 <!-- ══ FOOTER ════════════════════════════════════════════════ -->
 <footer class="footer" id="contact">
   <div class="footer__inner">
@@ -508,6 +543,7 @@
           <li><a href="#">Support &amp; Contact</a></li>
           <li><a href="#">Returns</a></li>
           <li><a href="#" id="footerPartnerBtn">Become a Partner</a></li>
+          <li><a href="https://chat.whatsapp.com/JgqbexB6z4kGSysNtLB7HE?mode=gi_t" target="_blank">Join WhatsApp Group</a></li>
         </ul>
       </div>
     </div>
