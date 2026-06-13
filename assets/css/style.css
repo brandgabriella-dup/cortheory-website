@@ -123,6 +123,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .product-card__btn:hover { background: #f0ede6; }
 .product-card__btn svg { width: 15px; height: 15px; flex-shrink: 0; }
 
+/* ── SHOP FILTERS ─────────────────────────────────────── */
+.shop__filters { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; padding: 0 20px; }
+.shop__filter-btn { padding: 10px 16px; border: 1px solid var(--border); border-radius: 100px; font-size: 12px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: transparent; transition: all 0.2s; cursor: pointer; }
+.shop__filter-btn:hover { border-color: var(--dark); color: var(--dark); }
+.shop__filter-btn.active { background: var(--dark); color: #fff; border-color: var(--dark); }
+
 /* ── PURITY ───────────────────────────────────────────── */
 .purity-hero { width: 100%; overflow: hidden; }
 

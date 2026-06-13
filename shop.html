@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CorTheory — Structured Hormone Optimization</title>
-  <meta name="description" content="Premium research-grade peptides. South Africa-based. Education-first. Clinical, structured, and human." />
+  <title>Shop — CorTheory Research Peptides</title>
+  <meta name="description" content="Browse our complete catalog of research-grade peptides." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -16,13 +16,13 @@
 <!-- ══ NAV ══════════════════════════════════════════════════ -->
 <nav class="nav" id="nav">
   <div class="nav__inner">
-    <a href="#" class="nav__logo">
+    <a href="index.html" class="nav__logo">
       <img src="assets/images/logo-black.png" alt="CorTheory" />
     </a>
     <ul class="nav__links">
-      <li><a href="#products">Shop</a></li>
-      <li><a href="#coas">COA's</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="index.html#coas">COA's</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
       <li><a href="#partners">Partner Program</a></li>
     </ul>
     <div class="nav__right">
@@ -41,7 +41,7 @@
           <path d="M16 10a4 4 0 01-8 0"/>
         </svg>
       </button>
-      <a href="#products" class="btn btn-dark">Shop All</a>
+      <a href="shop.html" class="btn btn-dark">Shop All</a>
       <button class="nav__hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -51,48 +51,58 @@
 
 <!-- Mobile nav -->
 <div class="nav__mobile" id="mobileNav">
-  <a href="#products">Shop</a>
-  <a href="#coas">COA's</a>
-  <a href="#contact">Contact</a>
+  <a href="shop.html">Shop</a>
+  <a href="index.html#coas">COA's</a>
+  <a href="index.html#contact">Contact</a>
   <a href="#partners">Partner Program</a>
-  <a href="#products">Shop All</a>
+  <a href="shop.html">Shop All</a>
 </div>
 
-<!-- ══ HERO ══════════════════════════════════════════════════ -->
-<section class="hero" id="home">
-  <div class="hero__inner">
-    <div class="hero__content">
-      <p class="hero__eyebrow">Explore Collection</p>
-      <h1 class="hero__title">The CorTheory<br>Difference</h1>
-      <p class="hero__subtitle">Structured hormone optimization for high-performing bodies. South Africa-based. Education-first. Clinical, structured, and human.</p>
-      <div class="hero__actions">
-        <a href="#products" class="btn btn-light">Explore Research Catalogue</a>
-        <a href="https://chat.whatsapp.com/YOUR_GROUP_LINK" class="btn btn-light">Join Our WhatsApp Group</a>
-      </div>
-    </div>
-    <div class="hero__image-wrap">
-      <img src="assets/images/landscape-resize.png" alt="CorTheory Vials Collection" class="hero__vial" />
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ PRODUCT ROW ════════════════════════════════════════════ -->
+<!-- ══ PRODUCT CATALOG ════════════════════════════════════════════ -->
 <section class="products section" id="products">
   <div class="container">
     <div class="products__layout">
       <div class="section-header__left">
         <p class="section-eyebrow">Research Compounds</p>
-        <h2 class="section-title">Complete Research Catalog</h2>
+        <h2 class="section-title">Product Catalog</h2>
       </div>
       <div>
         <p class="products__intro-body">High-purity sequenced peptides and lyophilised coenzymes synthesized for exacting laboratory protocols and molecular analysis.</p>
-        <br/>
-        <a href="#products" class="section-link">View All Catalog →</a>
       </div>
     </div>
 
+    <!-- Filter buttons -->
+    <div class="shop__filters">
+      <button class="shop__filter-btn active">All Products</button>
+      <button class="shop__filter-btn">Skin & Anti-Aging</button>
+      <button class="shop__filter-btn">Muscle & Performance</button>
+      <button class="shop__filter-btn">Weight Management</button>
+      <button class="shop__filter-btn">Recovery & Healing</button>
+      <button class="shop__filter-btn">Mind, Mood & Sleep</button>
+    </div>
+
     <div class="products__row" id="productsRow">
+
+      <!-- RETA -->
+      <div class="product-card" style="background:#FFFFF0;">
+        <div class="product-card__top">
+          <h3 class="product-card__name">RETA</h3>
+          <p class="product-card__type">Retinal Peptide</p>
+        </div>
+        <div class="product-card__img-wrap">
+          <img src="assets/images/reta-new.png" alt="RETA" class="product-card__img" />
+        </div>
+        <div class="product-card__footer">
+          <div class="product-card__price-block">
+            <span class="product-card__from">From</span>
+            <span class="product-card__price">R 1,005.00</span>
+          </div>
+          <button class="product-card__btn" data-cart>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Add to Bag
+          </button>
+        </div>
+      </div>
 
       <!-- AOD -->
       <div class="product-card" style="background:#A8D5D8; opacity: 0.6;">
@@ -153,27 +163,6 @@
           <button class="product-card__btn" data-cart disabled style="opacity: 0.5; cursor: not-allowed;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
             Out of Stock
-          </button>
-        </div>
-      </div>
-
-      <!-- RETA -->
-      <div class="product-card" style="background:#FFFFF0;">
-        <div class="product-card__top">
-          <h3 class="product-card__name">RETA</h3>
-          <p class="product-card__type">Retinal Peptide</p>
-        </div>
-        <div class="product-card__img-wrap">
-          <img src="assets/images/reta-new.png" alt="RETA" class="product-card__img" />
-        </div>
-        <div class="product-card__footer">
-          <div class="product-card__price-block">
-            <span class="product-card__from">From</span>
-            <span class="product-card__price">R 1,005.00</span>
-          </div>
-          <button class="product-card__btn" data-cart>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-            Add to Bag
           </button>
         </div>
       </div>
@@ -266,178 +255,6 @@
   </div>
 </section>
 
-<!-- ══ PURITY ════════════════════════════════════════════════ -->
-<section class="purity" id="purity">
-  <div class="purity__content-wrap">
-    <div class="purity__content">
-      <h2 class="purity__heading">Premium<br>Research<br>Peptides.</h2>
-      <!-- ══ HERO IMAGE ════════════════════════════════════════════ -->
-      <div class="purity-hero" id="purity-hero">
-        <img src="assets/images/purity-hero.png" alt="Research Peptides" class="purity-hero__image" />
-      </div>
-      <div class="purity__rule"></div>
-      <p class="purity__body">We formulate and distribute the highest standard of research-grade peptides. Every batch undergoes strict multi-stage HPLC testing and mass spectrometry to guarantee absolute purity.</p>
-      <div class="purity__stats">
-        <div class="purity__stat">
-          <span class="purity__stat-val">99%+</span>
-          <span class="purity__stat-label">HPLC Purity</span>
-        </div>
-        <div class="purity__stat-sep"></div>
-        <div class="purity__stat">
-          <span class="purity__stat-val">100%</span>
-          <span class="purity__stat-label">Lab Verified</span>
-        </div>
-        <div class="purity__stat-sep"></div>
-        <div class="purity__stat">
-          <span class="purity__stat-val">SA</span>
-          <span class="purity__stat-label">Sourced</span>
-        </div>
-      </div>
-      <div class="purity__actions">
-        <a href="#products" class="btn btn-dark">Buy Now</a>
-        <a href="#coas" class="btn btn-outline">COAs</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ QUALITY TABS ══════════════════════════════════════════ -->
-<section class="quality section" id="quality">
-  <div class="container">
-    <h2 class="quality__heading">Quality you can verify,<br>not just trust.</h2>
-
-    <div class="quality__layout">
-      <!-- Left: tabs -->
-      <div class="quality__left">
-        <div class="quality__tabs-nav" role="tablist">
-          <button class="quality__tab active" data-tab="potency">Potency</button>
-          <button class="quality__tab" data-tab="purity">Purity</button>
-          <button class="quality__tab" data-tab="stability">Stability</button>
-          <button class="quality__tab" data-tab="safety">Safety</button>
-          <button class="quality__tab" data-tab="consistency">Consistency</button>
-        </div>
-
-        <div class="quality__panel active" data-panel="potency">
-          <h3 class="quality__panel-title">Potency</h3>
-          <p class="quality__panel-sub">Concentration Verified</p>
-          <p class="quality__panel-body">Every CorTheory compound is independently assayed for active concentration before release. HPLC-based potency analysis confirms each vial contains the stated quantity within ±2% variance — ensuring reliable and reproducible research outcomes.</p>
-          <a href="#products" class="quality__panel-link">Shop Now →</a>
-          <div><span class="quality__badge">Free COA included with every order</span></div>
-        </div>
-
-        <div class="quality__panel" data-panel="purity">
-          <h3 class="quality__panel-title">Purity</h3>
-          <p class="quality__panel-sub">99%+ Grade Standard</p>
-          <p class="quality__panel-body">Purity is measured via reverse-phase HPLC at accredited laboratories. Impurity profiling identifies and quantifies any off-target peaks. Only batches reaching ≥99% purity are dispatched — no exceptions.</p>
-          <a href="#products" class="quality__panel-link">Shop Now →</a>
-          <div><span class="quality__badge">Free COA included with every order</span></div>
-        </div>
-
-        <div class="quality__panel" data-panel="stability">
-          <h3 class="quality__panel-title">Stability</h3>
-          <p class="quality__panel-sub">Long-Term Integrity</p>
-          <p class="quality__panel-body">Lyophilisation is performed under controlled conditions to maximise shelf-life. Stability studies confirm degradation rates well within acceptable limits. Properly stored peptides retain potency for 24+ months at -20°C.</p>
-          <a href="#products" class="quality__panel-link">Shop Now →</a>
-          <div><span class="quality__badge">Free COA included with every order</span></div>
-        </div>
-
-        <div class="quality__panel" data-panel="safety">
-          <h3 class="quality__panel-title">Safety</h3>
-          <p class="quality__panel-sub">Residual Solvent Screening</p>
-          <p class="quality__panel-body">All batches are screened for residual solvents, heavy metals, and microbial contamination per international pharmacopoeial standards. Safety testing is performed at independent, accredited third-party facilities prior to release.</p>
-          <a href="#products" class="quality__panel-link">Shop Now →</a>
-          <div><span class="quality__badge">Free COA included with every order</span></div>
-        </div>
-
-        <div class="quality__panel" data-panel="consistency">
-          <h3 class="quality__panel-title">Consistency</h3>
-          <p class="quality__panel-sub">Batch-to-Batch Reliability</p>
-          <p class="quality__panel-body">CorTheory maintains rigorous batch records and inter-batch comparison data. The compound you receive today matches the specification of every prior batch — same sequence, same purity, same result.</p>
-          <a href="#products" class="quality__panel-link">Shop Now →</a>
-          <div><span class="quality__badge">Free COA included with every order</span></div>
-        </div>
-      </div>
-
-      <!-- Right: image -->
-      <div class="quality__image-wrap">
-        <img src="assets/images/recolour-blue-strips-1.png" alt="Quality Verification" class="quality__vial" />
-        <div class="quality__purity-badge">99%+ Purity<br>Verified by HPLC</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FAQ ═══════════════════════════════════════════════════ -->
-<section class="faq section" id="faq">
-  <div class="container">
-    <div class="faq__layout">
-
-      <!-- Left: accordion -->
-      <div class="faq__left">
-        <h2 class="faq__heading">Common<br>Questions.</h2>
-
-        <div class="faq__item open">
-          <button class="faq__btn">
-            <span class="faq__q">How pure are CorTheory peptides, and what is your testing protocol?</span>
-            <span class="faq__icon">
-              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
-              </svg>
-            </span>
-          </button>
-          <div class="faq__answer">
-            <p>All CorTheory peptides are independently tested to 99%+ purity using HPLC analysis and mass spectrometry. Every batch is verified by accredited laboratories before dispatch.</p>
-          </div>
-        </div>
-
-        <div class="faq__item">
-          <button class="faq__btn">
-            <span class="faq__q">How do I interpret a Certificate of Analysis (CoA)?</span>
-            <span class="faq__icon">
-              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
-              </svg>
-            </span>
-          </button>
-          <div class="faq__answer">
-            <p>A CoA confirms the identity, purity, and concentration of your compound. Look for the HPLC chromatogram, purity percentage, and molecular weight confirmation. All CorTheory orders include a CoA.</p>
-          </div>
-        </div>
-
-        <div class="faq__item">
-          <button class="faq__btn">
-            <span class="faq__q">What reconstitution solvent is recommended?</span>
-            <span class="faq__icon">
-              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
-              </svg>
-            </span>
-          </button>
-          <div class="faq__answer">
-            <p>We recommend bacteriostatic water for most peptides. Add solvent slowly along the vial side and allow to dissolve without agitation. Store reconstituted peptides at 4°C.</p>
-          </div>
-        </div>
-
-        <div class="faq__item">
-          <button class="faq__btn">
-            <span class="faq__q">What are optimal storage conditions for lyophilised compounds?</span>
-            <span class="faq__icon">
-              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
-              </svg>
-            </span>
-          </button>
-          <div class="faq__answer">
-            <p>Store lyophilised peptides at -20°C for long-term stability. Once reconstituted, refrigerate at 4°C and use within 28 days. Keep away from light and humidity.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- ══ CTA BANNER ════════════════════════════════════════════ -->
 <div class="cta-wrap">
   <div class="cta">
@@ -445,8 +262,8 @@
       <h2 class="cta__title">The standard for research integrity.</h2>
       <p class="cta__sub">Premium research-grade peptides engineered for precision and molecular stability. Tested and verified for absolute purity.</p>
       <div class="cta__actions">
-        <a href="#quality" class="btn btn-dark">See the Proof</a>
-        <a href="#products" class="btn btn-outline-light">Shop Catalog</a>
+        <a href="index.html#quality" class="btn btn-dark">See the Proof</a>
+        <a href="shop.html" class="btn btn-outline-light">View Full Catalog</a>
       </div>
     </div>
   </div>
@@ -467,12 +284,12 @@
       <div>
         <p class="footer__col-head">Shop</p>
         <ul class="footer__links">
-          <li><a href="#products">All Products</a></li>
-          <li><a href="#products">AOD</a></li>
-          <li><a href="#products">BPC-157</a></li>
-          <li><a href="#products">MOTS-C</a></li>
-          <li><a href="#products">RETA</a></li>
-          <li><a href="#products">TB-500</a></li>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="shop.html">AOD</a></li>
+          <li><a href="shop.html">BPC-157</a></li>
+          <li><a href="shop.html">MOTS-C</a></li>
+          <li><a href="shop.html">RETA</a></li>
+          <li><a href="shop.html">TB-500</a></li>
         </ul>
       </div>
       <div>
