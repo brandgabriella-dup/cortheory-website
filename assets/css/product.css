@@ -1,0 +1,284 @@
+/* ── PRODUCT DETAIL SECTION ───────────────────────────────── */
+.product-detail {
+  padding: 100px 0;
+  background: #F2F0EA;
+}
+
+.product-detail__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ── PRODUCT IMAGES ───────────────────────────────────────── */
+.product-detail__images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-detail__main {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f0ede6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.product-detail__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.product-detail__thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.product-detail__thumb {
+  width: 100%;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.product-detail__thumb:hover,
+.product-detail__thumb.active {
+  border-color: #1a1a1a;
+}
+
+/* ── PRODUCT INFO ─────────────────────────────────────────── */
+.product-detail__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-detail__name {
+  font-family: 'Inter', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.product-detail__type {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 24px;
+}
+
+.product-detail__price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 36px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #E0DDD6;
+}
+
+.product-detail__price {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.product-detail__status {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666666;
+  background: #f0ede6;
+  padding: 6px 12px;
+  border-radius: 100px;
+}
+
+/* ── SIZE SELECTOR ────────────────────────────────────────── */
+.product-detail__selector {
+  margin-bottom: 32px;
+}
+
+.product-detail__selector-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 12px;
+}
+
+.product-detail__sizes {
+  display: flex;
+  gap: 12px;
+}
+
+.product-detail__size {
+  padding: 12px 20px;
+  border: 1px solid #E0DDD6;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.product-detail__size:hover {
+  border-color: #1a1a1a;
+}
+
+.product-detail__size.active {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+
+/* ── SUBSCRIPTION OPTIONS ─────────────────────────────────── */
+.product-detail__subscription {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding: 20px;
+  background: #f0ede6;
+  border-radius: 12px;
+}
+
+.product-detail__sub-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.product-detail__sub-label input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* ── ADD TO CART BUTTON ───────────────────────────────────── */
+.product-detail__add-btn {
+  width: 100%;
+  padding: 16px 24px;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+/* ── HEALTH BENEFITS ──────────────────────────────────────── */
+.product-detail__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-detail__benefits-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+.product-detail__benefit-item {
+  display: flex;
+  gap: 20px;
+}
+
+.product-detail__benefit-icon {
+  font-size: 20px;
+  color: #1a1a1a;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+.product-detail__benefit-item h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.product-detail__benefit-item p {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* ── SIMILAR PRODUCTS ─────────────────────────────────────── */
+.similar-products {
+  background: #F2F0EA;
+  padding-top: 80px;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .product-detail__layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .product-detail__name {
+    font-size: 40px;
+  }
+
+  .product-detail__main {
+    min-height: 400px;
+  }
+
+  .product-detail__thumbnails {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-detail {
+    padding: 60px 0;
+  }
+
+  .product-detail__layout {
+    gap: 32px;
+  }
+
+  .product-detail__name {
+    font-size: 32px;
+  }
+
+  .product-detail__price {
+    font-size: 28px;
+  }
+
+  .product-detail__main {
+    min-height: 300px;
+  }
+
+  .product-detail__thumbnails {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-detail__sizes {
+    flex-wrap: wrap;
+  }
+
+  .product-detail__price-block {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

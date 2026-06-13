@@ -438,6 +438,17 @@
   </div>
 </section>
 
+<!-- ══ PARTNER SECTION ═══════════════════════════════════════ -->
+<section class="partner-section section">
+  <div class="container">
+    <div class="partner-content">
+      <h2 class="partner-title">Advance the standard.</h2>
+      <p class="partner-subtitle">Join the Peaked network and help independent researchers access verified compounds.</p>
+      <button class="btn btn-dark" id="partnerFormBtn">Apply to be a Partner</button>
+    </div>
+  </div>
+</section>
+
 <!-- ══ CTA BANNER ════════════════════════════════════════════ -->
 <div class="cta-wrap">
   <div class="cta">
@@ -446,7 +457,7 @@
       <p class="cta__sub">Premium research-grade peptides engineered for precision and molecular stability. Tested and verified for absolute purity.</p>
       <div class="cta__actions">
         <a href="#quality" class="btn btn-dark">See the Proof</a>
-        <a href="#products" class="btn btn-outline-light">Shop Catalog</a>
+        <a href="shop.html" class="btn btn-outline-light">Shop Catalog</a>
       </div>
     </div>
   </div>
@@ -496,6 +507,7 @@
         <ul class="footer__links">
           <li><a href="#">Support &amp; Contact</a></li>
           <li><a href="#">Returns</a></li>
+          <li><a href="#" id="footerPartnerBtn">Become a Partner</a></li>
         </ul>
       </div>
     </div>
@@ -512,6 +524,35 @@
     <div style="font-size: 180px; font-weight: 900; color: #2A3D2E; opacity: 0.3; text-align: center; overflow: hidden; line-height: 1; font-family: 'Playfair Display', Georgia, serif; letter-spacing: -0.04em; user-select: none; pointer-events: none;">CorTheory</div>
   </div>
 </footer>
+
+<!-- ══ PARTNER MODAL ═════════════════════════════════════════ -->
+<div class="partner-modal-overlay" id="partnerModalOverlay"></div>
+<div class="partner-modal" id="partnerModal">
+  <button class="partner-modal__close" id="partnerModalClose">×</button>
+  <div class="partner-modal__content">
+    <h2 class="partner-modal__title">Become a Partner</h2>
+    <p class="partner-modal__subtitle">Help researchers access verified compounds. We'll be in touch shortly.</p>
+
+    <form class="partner-form" id="partnerForm">
+      <div class="partner-form__group">
+        <label for="partnerName">Full Name</label>
+        <input type="text" id="partnerName" name="name" required />
+      </div>
+
+      <div class="partner-form__group">
+        <label for="partnerEmail">Email Address</label>
+        <input type="email" id="partnerEmail" name="email" required />
+      </div>
+
+      <div class="partner-form__group">
+        <label for="partnerPhone">Phone Number</label>
+        <input type="tel" id="partnerPhone" name="phone" required />
+      </div>
+
+      <button type="submit" class="btn btn-dark partner-form__btn">Submit Application</button>
+    </form>
+  </div>
+</div>
 
 <!-- ══ CART DRAWER ═══════════════════════════════════════════ -->
 <div class="cart-overlay" id="cartOverlay"></div>

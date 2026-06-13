@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GHK-Cu — CorTheory Research Peptides</title>
+  <meta name="description" content="GHK-Cu Copper Peptide Serum - Premium research-grade peptide for skin health and repair." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/product.css" />
+  <link rel="stylesheet" href="assets/css/cart.css" />
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/images/logo-black.png" alt="CorTheory" />
+    </a>
+    <ul class="nav__links">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="index.html#coas">COA's</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="#partners">Partner Program</a></li>
+    </ul>
+    <div class="nav__right">
+      <button class="nav__icon" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </button>
+      <button class="nav__icon" id="cartOpen" aria-label="Cart" data-cart>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+      </button>
+      <a href="shop.html" class="btn btn-dark">Shop All</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="nav__mobile" id="mobileNav">
+  <a href="shop.html">Shop</a>
+  <a href="index.html#coas">COA's</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="#partners">Partner Program</a>
+  <a href="shop.html">Shop All</a>
+</div>
+
+<!-- ══ PRODUCT DETAIL ═════════════════════════════════════════ -->
+<section class="product-detail">
+  <div class="container">
+    <div class="product-detail__layout">
+      <!-- Left: Images -->
+      <div class="product-detail__images">
+        <div class="product-detail__main">
+          <img src="assets/images/recolour-blue-strips-3.png" alt="GHK-Cu Product" class="product-detail__img" />
+        </div>
+        <div class="product-detail__thumbnails">
+          <img src="assets/images/recolour-blue-strips-3.png" alt="GHK-Cu" class="product-detail__thumb" />
+          <img src="assets/images/recolour-blue-strips-1.png" alt="GHK-Cu Details" class="product-detail__thumb" />
+          <img src="assets/images/recolour-blue-strips-2.png" alt="GHK-Cu Usage" class="product-detail__thumb" />
+          <img src="assets/images/recolour-blue-strips-4.png" alt="GHK-Cu Pack" class="product-detail__thumb" />
+        </div>
+      </div>
+
+      <!-- Right: Product Info -->
+      <div class="product-detail__info">
+        <h1 class="product-detail__name">GHK-Cu</h1>
+        <p class="product-detail__type">Copper Peptide Serum</p>
+
+        <div class="product-detail__price-block">
+          <span class="product-detail__price">R 1,200.00</span>
+          <span class="product-detail__status">In Stock</span>
+        </div>
+
+        <!-- Size/Quantity Selector -->
+        <div class="product-detail__selector">
+          <label class="product-detail__selector-label">Select Size:</label>
+          <div class="product-detail__sizes">
+            <button class="product-detail__size active" data-size="1ml">1ml</button>
+            <button class="product-detail__size" data-size="2ml">2ml</button>
+            <button class="product-detail__size" data-size="5ml">5ml</button>
+            <button class="product-detail__size" data-size="10ml">10ml</button>
+          </div>
+        </div>
+
+        <!-- Subscription Options -->
+        <div class="product-detail__subscription">
+          <label class="product-detail__sub-label">
+            <input type="radio" name="subscription" value="once" checked />
+            <span>One-Time Purchase</span>
+          </label>
+          <label class="product-detail__sub-label">
+            <input type="radio" name="subscription" value="monthly" />
+            <span>Monthly Subscription (10% off)</span>
+          </label>
+        </div>
+
+        <!-- Add to Cart -->
+        <button class="btn btn-dark product-detail__add-btn" data-cart data-product-id="ghk-cu">
+          Add to Cart
+        </button>
+
+        <!-- Health Benefits -->
+        <div class="product-detail__benefits">
+          <h3 class="product-detail__benefits-title">Health Benefits</h3>
+          <div class="product-detail__benefit-item">
+            <span class="product-detail__benefit-icon">→</span>
+            <div>
+              <h4>Collagen Production</h4>
+              <p>Stimulates natural collagen synthesis for improved skin elasticity and firmness.</p>
+            </div>
+          </div>
+          <div class="product-detail__benefit-item">
+            <span class="product-detail__benefit-icon">→</span>
+            <div>
+              <h4>Skin Repair</h4>
+              <p>Accelerates wound healing and tissue regeneration at the cellular level.</p>
+            </div>
+          </div>
+          <div class="product-detail__benefit-item">
+            <span class="product-detail__benefit-icon">→</span>
+            <div>
+              <h4>Antioxidant Protection</h4>
+              <p>Provides defense against oxidative stress and environmental damage.</p>
+            </div>
+          </div>
+          <div class="product-detail__benefit-item">
+            <span class="product-detail__benefit-icon">→</span>
+            <div>
+              <h4>Overall Radiance</h4>
+              <p>Promotes a more youthful, glowing complexion with consistent use.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SIMILAR PRODUCTS ═══════════════════════════════════════ -->
+<section class="similar-products section">
+  <div class="container">
+    <h2 class="section-title">You may also need.</h2>
+
+    <div class="products__row" style="margin-top: 40px;">
+      <!-- RETA -->
+      <div class="product-card" style="background:#FFFFF0;">
+        <div class="product-card__top">
+          <h3 class="product-card__name">RETA</h3>
+          <p class="product-card__type">Retinal Peptide</p>
+        </div>
+        <div class="product-card__img-wrap">
+          <img src="assets/images/reta-new.png" alt="RETA" class="product-card__img" />
+        </div>
+        <div class="product-card__footer">
+          <div class="product-card__price-block">
+            <span class="product-card__from">From</span>
+            <span class="product-card__price">R 1,005.00</span>
+          </div>
+          <a href="product.html" class="product-card__btn" style="background: #fff; color: var(--dark);">
+            View Details
+          </a>
+        </div>
+      </div>
+
+      <!-- BPC-157 -->
+      <div class="product-card" style="background:#DCE8F5;">
+        <div class="product-card__top">
+          <h3 class="product-card__name">BPC-157</h3>
+          <p class="product-card__type">Regenerative Peptide</p>
+        </div>
+        <div class="product-card__img-wrap">
+          <img src="assets/images/bpc-157.png" alt="BPC-157" class="product-card__img" />
+        </div>
+        <div class="product-card__footer">
+          <div class="product-card__price-block">
+            <span class="product-card__from">From</span>
+            <span class="product-card__price">R 450.00</span>
+          </div>
+          <a href="product.html" class="product-card__btn" style="background: #fff; color: var(--dark);">
+            View Details
+          </a>
+        </div>
+      </div>
+
+      <!-- TB-500 -->
+      <div class="product-card" style="background:#E8B080;">
+        <div class="product-card__top">
+          <h3 class="product-card__name">TB-500</h3>
+          <p class="product-card__type">Recovery Peptide</p>
+        </div>
+        <div class="product-card__img-wrap">
+          <img src="assets/images/recolour-blue-strips-2.png" alt="TB-500" class="product-card__img" />
+        </div>
+        <div class="product-card__footer">
+          <div class="product-card__price-block">
+            <span class="product-card__from">From</span>
+            <span class="product-card__price">R 500.00</span>
+          </div>
+          <a href="product.html" class="product-card__btn" style="background: #fff; color: var(--dark);">
+            View Details
+          </a>
+        </div>
+      </div>
+
+      <!-- TIRZ -->
+      <div class="product-card" style="background:#F1E8FB;">
+        <div class="product-card__top">
+          <h3 class="product-card__name">TIRZ</h3>
+          <p class="product-card__type">Metabolic Peptide</p>
+        </div>
+        <div class="product-card__img-wrap">
+          <img src="assets/images/tirz.png" alt="TIRZ" class="product-card__img" />
+        </div>
+        <div class="product-card__footer">
+          <div class="product-card__price-block">
+            <span class="product-card__from">From</span>
+            <span class="product-card__price">R 614.00</span>
+          </div>
+          <a href="product.html" class="product-card__btn" style="background: #fff; color: var(--dark);">
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BANNER ════════════════════════════════════════════ -->
+<div class="cta-wrap">
+  <div class="cta">
+    <div class="cta__inner">
+      <h2 class="cta__title">The standard for research integrity.</h2>
+      <p class="cta__sub">Premium research-grade peptides engineered for precision and molecular stability. Tested and verified for absolute purity.</p>
+      <div class="cta__actions">
+        <a href="index.html#quality" class="btn btn-dark">See the Proof</a>
+        <a href="shop.html" class="btn btn-outline-light">Shop Catalog</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer class="footer" id="contact">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/images/cor logo white copy.png" alt="CorTheory" />
+        <p class="footer__tagline">
+          Premium research-grade peptides.<br>
+          Engineered for precision.<br>
+          Verified for absolute purity.
+        </p>
+      </div>
+      <div>
+        <p class="footer__col-head">Shop</p>
+        <ul class="footer__links">
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="shop.html">AOD</a></li>
+          <li><a href="shop.html">BPC-157</a></li>
+          <li><a href="shop.html">MOTS-C</a></li>
+          <li><a href="shop.html">RETA</a></li>
+          <li><a href="shop.html">TB-500</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-head">Resources</p>
+        <ul class="footer__links" id="coas">
+          <li><a href="#">Research Library</a></li>
+          <li><a href="#">Certificates of Analysis</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-head">Legal</p>
+        <ul class="footer__links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Research Use Only</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-head" id="partners">Support</p>
+        <ul class="footer__links">
+          <li><a href="#">Support &amp; Contact</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#" id="footerPartnerBtn">Become a Partner</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 CorTheory. Southern Africa. Research Use Only.</p>
+      <div class="footer__legal-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__watermark">
+    <div style="font-size: 180px; font-weight: 900; color: #2A3D2E; opacity: 0.3; text-align: center; overflow: hidden; line-height: 1; font-family: 'Playfair Display', Georgia, serif; letter-spacing: -0.04em; user-select: none; pointer-events: none;">CorTheory</div>
+  </div>
+</footer>
+
+<!-- ══ PARTNER MODAL ═════════════════════════════════════════ -->
+<div class="partner-modal-overlay" id="partnerModalOverlay"></div>
+<div class="partner-modal" id="partnerModal">
+  <button class="partner-modal__close" id="partnerModalClose">×</button>
+  <div class="partner-modal__content">
+    <h2 class="partner-modal__title">Become a Partner</h2>
+    <p class="partner-modal__subtitle">Help researchers access verified compounds. We'll be in touch shortly.</p>
+
+    <form class="partner-form" id="partnerForm">
+      <div class="partner-form__group">
+        <label for="partnerName">Full Name</label>
+        <input type="text" id="partnerName" name="name" required />
+      </div>
+
+      <div class="partner-form__group">
+        <label for="partnerEmail">Email Address</label>
+        <input type="email" id="partnerEmail" name="email" required />
+      </div>
+
+      <div class="partner-form__group">
+        <label for="partnerPhone">Phone Number</label>
+        <input type="tel" id="partnerPhone" name="phone" required />
+      </div>
+
+      <button type="submit" class="btn btn-dark partner-form__btn">Submit Application</button>
+    </form>
+  </div>
+</div>
+
+<!-- ══ CART DRAWER ═══════════════════════════════════════════ -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <div class="cart-header__left">
+      <svg class="cart-header__icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+      </svg>
+      <h2 class="cart-header__title">YOUR CART</h2>
+    </div>
+    <span class="cart-badge" id="cartBadge">0</span>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">×</button>
+  </div>
+
+  <div class="cart-shipping">
+    <div class="cart-shipping__info">
+      <span class="cart-shipping__label">FREE SHIPPING OVER $100</span>
+      <span class="cart-shipping__amount" id="shippingAmount">$100 away</span>
+    </div>
+    <div class="cart-shipping__bar">
+      <div class="cart-shipping__fill" id="shippingFill"></div>
+    </div>
+  </div>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-checkout" id="checkoutCard" style="display: none;">
+    <div class="cart-checkout__row">
+      <span>Subtotal</span>
+      <span id="subtotalPrice">$0.00</span>
+    </div>
+    <div class="cart-checkout__row">
+      <span>Shipping</span>
+      <span id="shippingPrice">$10.00</span>
+    </div>
+    <div class="cart-checkout__divider"></div>
+    <div class="cart-checkout__total">
+      <span>Total</span>
+      <div>
+        <span class="cart-checkout__total-amount" id="totalPrice">$10.00</span>
+        <span class="cart-checkout__currency">USD</span>
+      </div>
+    </div>
+
+    <button class="cart-checkout__btn" id="proceedCheckout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+        <path d="M7 11V7a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v4"></path>
+      </svg>
+      PROCEED TO CHECKOUT
+    </button>
+
+    <p class="cart-checkout__disclaimer">
+      By checking out, you agree to our Terms of Service.<br>
+      Monthly billing. Cancel anytime.
+    </p>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/cart.js"></script>
+</body>
+</html>
