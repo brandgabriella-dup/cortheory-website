@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BPC-157 — CorTheory Research Peptides</title>
+  <meta name="description" content="BPC-157 Regenerative Peptide - Premium research-grade peptide for tissue repair and regeneration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/product.css" />
+  <link rel="stylesheet" href="assets/css/cart.css" />
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/images/logo-black.png" alt="CorTheory" />
+    </a>
+    <ul class="nav__links">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="index.html#coas">COA's</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="#partners">Partner Program</a></li>
+    </ul>
+    <div class="nav__right">
+      <button class="nav__icon" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </button>
+      <button class="nav__icon" id="cartOpen" aria-label="Cart" data-cart>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+      </button>
+      <a href="shop.html" class="btn btn-dark">Shop All</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="nav__mobile" id="mobileNav">
+  <a href="shop.html">Shop</a>
+  <a href="index.html#coas">COA's</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="#partners">Partner Program</a>
+  <a href="shop.html">Shop All</a>
+</div>
+
+<!-- ══ PRODUCT DETAIL ═════════════════════════════════════════ -->
+<section class="product-detail">
+  <div class="container">
+    <div class="product-detail__layout">
+      <!-- Left: Image Only -->
+      <div class="product-detail__images">
+        <div class="product-detail__main">
+          <img src="assets/images/bpc-157.png" alt="BPC-157 Product" class="product-detail__img" />
+        </div>
+      </div>
+
+      <!-- Right: Product Info -->
+      <div class="product-detail__info">
+        <h1 class="product-detail__name">BPC-157</h1>
+        <p class="product-detail__type">Regenerative Peptide</p>
+
+        <div class="product-detail__price-block">
+          <span class="product-detail__price">R 450.00</span>
+          <span class="product-detail__status">In Stock</span>
+        </div>
+
+        <!-- Dosage Selector -->
+        <div class="product-detail__selector">
+          <label class="product-detail__selector-label">Select Dosage:</label>
+          <div class="product-detail__sizes">
+            <button class="product-detail__size active" data-size="5mg">5mg</button>
+            <button class="product-detail__size" data-size="10mg" disabled style="opacity: 0.5; cursor: not-allowed;">10mg (Out of Stock)</button>
+          </div>
+        </div>
+
+        <!-- Subscription Options -->
+        <div class="product-detail__subscription">
+          <label class="product-detail__sub-label">
+            <input type="radio" name="subscription" value="once" checked />
+            <span>One-Time Purchase</span>
+          </label>
+          <label class="product-detail__sub-label">
+            <input type="radio" name="subscription" value="monthly" />
+            <span>Monthly Subscription (10% off)</span>
+          </label>
+        </div>
+
+        <!-- Add to Cart -->
+        <button class="btn btn-dark product-detail__add-btn" data-cart data-product-id="bpc-157">
+          Add to Cart
+        </button>
+
+        <!-- Health Benefits -->
+        <div class="product-detail__benefits">
+          <h3 class="product-detail__benefits-title">Health Benefits</h3>
+          <div class="product-detail__benefit-item">
+            <span class="product-detail__benefit-icon">→</span>
+            <div>
+              <h4>Tissue Repair</h4>
+              <p>Promotes rapid healing and regeneration of damaged tissues.</p>
+            </div>
+          </div>
+          <div class="product-detail__benefit-item">
+            <span class="product-detail__benefit-icon">→</span>
+            <div>
+              <h4>Gut Health</h4>
+              <p>Supports intestinal lining integrity and digestive function.</p>
+            </div>
+          </div>
+          <div class="product-detail__benefit-item">
+            <span class="product-detail__benefit-icon">→</span>
+            <div>
+              <h4>Recovery Enhancement</h4>
+              <p>Accelerates recovery from injury and physical stress.</p>
+            </div>
+          </div>
+          <div class="product-detail__benefit-item">
+            <span class="product-detail__benefit-icon">→</span>
+            <div>
+              <h4>Systemic Healing</h4>
+              <p>Supports overall body healing and regeneration processes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BANNER ════════════════════════════════════════════ -->
+<div class="cta-wrap">
+  <div class="cta">
+    <div class="cta__inner">
+      <h2 class="cta__title">The standard for research integrity.</h2>
+      <p class="cta__sub">Premium research-grade peptides engineered for precision and molecular stability. Tested and verified for absolute purity.</p>
+      <div class="cta__actions">
+        <a href="shop.html" class="btn btn-dark">Shop All Products</a>
+        <a href="index.html#quality" class="btn btn-outline-light">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer class="footer" id="contact">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/images/cor logo white copy.png" alt="CorTheory" />
+        <p class="footer__tagline">
+          Premium research-grade peptides.<br>
+          Engineered for precision.<br>
+          Verified for absolute purity.
+        </p>
+      </div>
+      <div>
+        <p class="footer__col-head">Shop</p>
+        <ul class="footer__links">
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="product-reta.html">RETA</a></li>
+          <li><a href="product-tb500.html">TB-500</a></li>
+          <li><a href="product-tirz.html">TIRZ</a></li>
+          <li><a href="product-ghkcu.html">GHK-Cu</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-head">Resources</p>
+        <ul class="footer__links" id="coas">
+          <li><a href="#">Research Library</a></li>
+          <li><a href="#">Certificates of Analysis</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-head">Legal</p>
+        <ul class="footer__links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Research Use Only</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-head" id="partners">Support</p>
+        <ul class="footer__links">
+          <li><a href="#">Support &amp; Contact</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#" id="footerPartnerBtn">Become a Partner</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 CorTheory. Southern Africa. Research Use Only.</p>
+      <div class="footer__legal-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+
+    <!-- ══ BECOME A PARTNER SECTION ════════════════════════ -->
+    <div class="footer__partner">
+      <h3 class="footer__partner-title">Become a Partner</h3>
+      <p class="footer__partner-subtitle">Help researchers access verified compounds. We'll be in touch shortly.</p>
+      <form class="footer__partner-form">
+        <div class="footer__partner-group">
+          <input type="text" placeholder="Full Name" required />
+        </div>
+        <div class="footer__partner-group">
+          <input type="email" placeholder="Email Address" required />
+        </div>
+        <div class="footer__partner-group">
+          <input type="tel" placeholder="Phone Number" required />
+        </div>
+        <button type="submit" class="btn btn-dark">Submit Application</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer__watermark">
+    <div style="font-size: 180px; font-weight: 900; color: #2A3D2E; opacity: 0.3; text-align: center; overflow: hidden; line-height: 1; font-family: 'Playfair Display', Georgia, serif; letter-spacing: -0.04em; user-select: none; pointer-events: none;">CorTheory</div>
+  </div>
+</footer>
+
+<!-- ══ CART DRAWER ═══════════════════════════════════════════ -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <div class="cart-header__left">
+      <svg class="cart-header__icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+      </svg>
+      <h2 class="cart-header__title">YOUR CART</h2>
+    </div>
+    <span class="cart-badge" id="cartBadge">0</span>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">×</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-checkout" id="checkoutCard" style="display: none;">
+    <div class="cart-checkout__row">
+      <span>Subtotal</span>
+      <span id="subtotalPrice">R 0.00</span>
+    </div>
+    <div class="cart-checkout__row">
+      <span>Shipping</span>
+      <span id="shippingPrice">R 150.00</span>
+    </div>
+    <div class="cart-checkout__divider"></div>
+    <div class="cart-checkout__total">
+      <span>Total</span>
+      <span id="totalPrice">R 150.00</span>
+    </div>
+    <button class="cart-checkout__btn" id="proceedCheckout">
+      PROCEED TO CHECKOUT
+    </button>
+    <p class="cart-checkout__disclaimer">
+      By checking out, you agree to our Terms of Service.<br>
+      Research Use Only.
+    </p>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
