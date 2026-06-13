@@ -129,10 +129,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .shop__filter-btn.active { background: var(--dark); color: #fff; border-color: var(--dark); }
 
 /* ── PARTNER SECTION ──────────────────────────────────── */
-.partner-section { background: linear-gradient(135deg, #1C2B22 0%, #2A4A3A 100%); color: #fff; }
-.partner-content { text-align: center; max-width: 600px; margin: 0 auto; }
-.partner-title { font-family: 'Inter', sans-serif; font-size: clamp(52px, 5.5vw, 80px); font-weight: 800; line-height: 1.05; margin-bottom: 20px; letter-spacing: -0.03em; }
-.partner-subtitle { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 40px; }
+.partner-section { padding: 100px 0; background: #ffffff; }
+.partner-content { text-align: left; max-width: 100%; display: flex; flex-direction: column; gap: 32px; }
+.partner-title { font-family: 'Inter', sans-serif; font-size: clamp(48px, 5.5vw, 72px); font-weight: 800; line-height: 1.05; color: var(--dark); letter-spacing: -0.03em; }
+.partner-subtitle { font-size: 16px; color: var(--muted); line-height: 1.7; max-width: 700px; }
 
 /* ── PARTNER MODAL ────────────────────────────────────── */
 .partner-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 500; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
