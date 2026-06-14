@@ -159,9 +159,9 @@ function updateTotals() {
   const shipping = subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : SHIPPING_COST;
   const total = subtotal + shipping;
 
-  subtotalPrice.textContent = `$${subtotal.toFixed(2)}`;
-  shippingPrice.textContent = shipping === 0 ? 'FREE' : `$${shipping.toFixed(2)}`;
-  totalPrice.textContent = `$${total.toFixed(2)}`;
+  subtotalPrice.textContent = `R${subtotal.toFixed(2)}`;
+  shippingPrice.textContent = shipping === 0 ? 'FREE' : `R${shipping.toFixed(2)}`;
+  totalPrice.textContent = `R${total.toFixed(2)}`;
 }
 
 function updateShippingBar() {
