@@ -320,5 +320,5 @@ Once live, consider:
 
 ---
 
-**Last Updated:** 2026-06-02
-**System Version:** 1.0
+**Last Updated:** 2026-06-14
+**System Version:** 1.1 - Added brand-aligned forms, product links, ZAR currency conversion
