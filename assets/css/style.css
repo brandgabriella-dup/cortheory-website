@@ -302,14 +302,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ── RESPONSIVE ───────────────────────────────────────── */
 @media (max-width: 900px) {
   .container { padding: 0 24px; }
-  .nav__inner { padding: 0 24px; }
+  .nav__inner { padding: 0 24px; gap: 16px; }
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
   .hero__inner { flex-direction: column; padding: 60px 24px; text-align: center; }
   .hero__title { font-size: 52px; }
   .hero__image-wrap { flex: 0 0 auto; }
   .hero__vial { width: 220px; }
-  .hero__actions { justify-content: center; }
+  .hero__actions { justify-content: center; gap: 8px; flex-wrap: wrap; }
+  .btn { padding: 10px 20px; font-size: 12px; }
   .categories__grid { grid-template-columns: 1fr 1fr; }
   .cat-card:nth-child(1),
   .cat-card:nth-child(2),
@@ -317,28 +318,109 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .cat-card:nth-child(4),
   .cat-card:nth-child(5) { grid-column: span 1; }
   .products__layout { grid-template-columns: 1fr; gap: 20px; }
+  .products__row { overflow-x: auto; scroll-behavior: smooth; }
   .products__row--grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .product-card { padding: 16px; }
+  .purity { padding: 60px 24px; }
   .purity__grid { grid-template-columns: 1fr; }
   .purity__image-side { min-height: 320px; }
-  .purity__content { padding: 48px 32px; }
-  .purity__heading { font-size: 48px; }
+  .purity__content { padding: 32px 20px; }
+  .purity__heading { font-size: 48px; line-height: 1.2; }
   .quality__layout { grid-template-columns: 1fr; }
+  .quality__left { margin-bottom: 32px; }
   .faq__layout { grid-template-columns: 1fr; }
   .footer__top { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer__inner { padding: 0 24px; }
+  .cta { margin: 0 12px; }
   .cta__title { font-size: 36px; }
   .cta__inner { padding: 60px 32px; }
   .section-title { font-size: 36px; }
 }
 
+@media (max-width: 768px) {
+  .section { padding: 60px 0; }
+  .container { padding: 0 16px; }
+  .nav__inner { padding: 0 16px; height: 56px; grid-template-columns: 1fr auto; }
+  .nav__right { gap: 12px; }
+  .btn { padding: 10px 16px; font-size: 11px; }
+  .nav__icon { width: 18px; height: 18px; }
+  .nav__icon svg { width: 16px; height: 16px; }
+  .footer__legal-links { flex-wrap: wrap; gap: 16px; }
+}
+
 @media (max-width: 600px) {
-  .hero__title { font-size: 40px; }
+  .section { padding: 40px 0; }
+  .container { padding: 0 16px; }
+  .hero { min-height: 80vh; }
+  .hero__inner { padding: 40px 16px; }
+  .hero__title { font-size: 32px; margin-bottom: 16px; }
+  .hero__subtitle { font-size: 14px; margin-bottom: 24px; }
+  .hero__actions { flex-direction: column; }
+  .btn { width: 100%; padding: 14px 16px; font-size: 12px; }
+  .nav__inner { padding: 0 12px; height: 52px; }
+  .nav__logo img { height: 20px; }
+  .nav__right { gap: 8px; }
+  .nav__hamburger { gap: 4px; }
+  .nav__hamburger span { width: 20px; }
+  .nav__mobile { padding: 16px 24px; gap: 12px; }
+  .nav__mobile a { font-size: 13px; padding: 10px 0; }
   .categories__grid { grid-template-columns: 1fr; }
-  .cat-card:nth-child(n) { grid-column: span 1; }
-  .products__row--grid { grid-template-columns: 1fr; }
-  .footer__top { grid-template-columns: 1fr; }
-  .cart-drawer { width: 100%; }
-  .faq__cats { grid-template-columns: 1fr; }
+  .cat-card { min-height: 240px; padding: 20px; }
+  .categories .cat-card { min-height: 280px; padding: 20px; }
+  .categories .cat-card:nth-child(1),
+  .categories .cat-card:nth-child(2) { min-height: 280px; }
+  .cat-card__title { font-size: 16px; }
+  .cat-card__vial { height: 120px; opacity: 0.7; }
+  .cat-card > div { max-width: 100%; }
+  .product-card { padding: 12px; }
+  .product-card__name { font-size: 14px; }
+  .product-card__price { font-size: 16px; }
+  .product-card__btn { padding: 10px; font-size: 11px; }
+  .products__row--grid { grid-template-columns: 1fr; gap: 12px; }
+  .section-title { font-size: 28px; }
+  .section-eyebrow { font-size: 10px; }
+  .purity { padding: 40px 16px; }
+  .purity__content { padding: 20px 0; }
+  .purity__heading { font-size: 32px; }
+  .purity__body { font-size: 13px; }
+  .purity__stats { flex-direction: column; gap: 12px; }
+  .quality__heading { font-size: 28px; }
+  .quality__tabs-nav { gap: 8px; }
+  .quality__tab { padding: 8px 12px; font-size: 12px; }
+  .faq__heading { font-size: 28px; }
+  .faq__cats { grid-template-columns: 1fr; gap: 12px; }
+  .faq__cat-card { min-height: 100px; padding: 16px; }
   .faq__cat-card--muscle { grid-column: span 1; }
+  .footer { padding-top: 40px; }
+  .footer__inner { padding: 0 16px; }
+  .footer__top { grid-template-columns: 1fr; gap: 24px; padding-bottom: 40px; }
+  .footer__brand img { height: 20px; }
+  .footer__col-head { margin-bottom: 12px; }
+  .footer__links li { margin-bottom: 8px; }
+  .footer__links a { font-size: 12px; }
+  .footer__bottom { flex-direction: column; gap: 16px; align-items: flex-start; }
+  .footer__copy { font-size: 11px; }
+  .footer__legal-links { flex-direction: column; gap: 8px; }
+  .footer__legal-links a { font-size: 11px; }
+  .footer__watermark { margin-top: 32px; }
+  .cta-wrap { padding: 0 12px 40px; }
+  .cta { border-radius: 12px; }
+  .cta__inner { padding: 40px 20px; }
+  .cta__title { font-size: 24px; margin-bottom: 16px; }
+  .cta__sub { font-size: 13px; margin-bottom: 24px; }
+  .cta__actions { flex-direction: column; gap: 8px; }
+  .contact-modal { width: 95%; max-width: 400px; padding: 32px 24px; }
+  .contact-modal__title { font-size: 24px; }
+  .contact-form__group { margin-bottom: 16px; }
+  .contact-form__group input,
+  .contact-form__group textarea { padding: 12px 14px; font-size: 14px; height: 42px; }
+  .contact-form__btn { padding: 14px 20px; }
+  .cart-drawer { width: 100%; }
+  .cart-drawer__head { padding: 16px 20px; }
+  .cart-drawer__title { font-size: 18px; }
+  .cart-drawer__body { padding: 20px; }
+  .cart-empty__icon { width: 40px; }
+  .cart-empty p { font-size: 13px; max-width: 180px; }
 }
 
 /* ── CATEGORIES SECTION OVERRIDES ────────────────────── */
