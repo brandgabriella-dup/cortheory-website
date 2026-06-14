@@ -2,9 +2,9 @@
 // SHOPPING CART - COMPLETE SYSTEM
 // ══════════════════════════════════════════════════════════════════════════════
 
-const CART_STORAGE_KEY = 'cortheory-cart';
-const FREE_SHIPPING_THRESHOLD = 100;
-const SHIPPING_COST = 10;
+const CART_STORAGE_KEY = 'cortheory_cart';
+const FREE_SHIPPING_THRESHOLD = 1500;
+const SHIPPING_COST = 150;
 
 // Cart state
 let cartItems = [];
