@@ -114,7 +114,7 @@ function renderCartItems() {
     return;
   }
 
-  cartItems.forEach(item => {
+  cartItems.forEach((item, index) => {
     const itemEl = document.createElement('div');
     itemEl.className = 'cart-item';
     itemEl.setAttribute('data-id', item.id);
@@ -123,30 +123,42 @@ function renderCartItems() {
       <div class="cart-item__content">
         <div class="cart-item__name">${item.name}</div>
         <div class="cart-item__variant">${item.variant}</div>
-        <div class="cart-item__stepper">
-          <button class="cart-item__stepper-btn qty-minus" data-id="${item.id}">−</button>
-          <input type="text" class="cart-item__qty" value="${item.quantity}" readonly />
-          <button class="cart-item__stepper-btn qty-plus" data-id="${item.id}">+</button>
+        <div class="cart-item__stepper" data-id="${item.id}">
+          <div style="display:inline-flex; align-items:center; border:1px solid #e8e5e0; border-radius:999px; overflow:hidden; height:36px;">
+            <button onclick="updateQuantity('${item.id}', -1)" style="width:36px; height:36px; background:white; border:none; cursor:pointer; font-size:16px; color:#0f0f0f; display:flex; align-items:center; justify-content:center; flex-shrink:0;">−</button>
+            <span class="qty-display-${item.id}" style="min-width:24px; text-align:center; font-size:13px; font-weight:500; color:#0f0f0f; font-family:Inter,sans-serif;">${item.quantity}</span>
+            <button onclick="updateQuantity('${item.id}', 1)" style="width:36px; height:36px; background:white; border:none; cursor:pointer; font-size:16px; color:#0f0f0f; display:flex; align-items:center; justify-content:center; flex-shrink:0;">+</button>
+          </div>
         </div>
       </div>
-      <span class="cart-item__price">$${(item.price * item.quantity).toFixed(2)}</span>
+      <span class="cart-item__price">R${(item.price * item.quantity).toFixed(2)}</span>
       <button class="cart-item__remove" data-id="${item.id}" aria-label="Remove">🗑</button>
     `;
     cartItemsContainer.appendChild(itemEl);
   });
 
-  // Attach event listeners
-  cartItemsContainer.querySelectorAll('.qty-minus').forEach(btn => {
-    btn.addEventListener('click', () => updateQuantity(btn.dataset.id, -1));
-  });
-
-  cartItemsContainer.querySelectorAll('.qty-plus').forEach(btn => {
-    btn.addEventListener('click', () => updateQuantity(btn.dataset.id, 1));
-  });
-
+  // Attach remove listeners
   cartItemsContainer.querySelectorAll('.cart-item__remove').forEach(btn => {
     btn.addEventListener('click', () => removeFromCart(btn.dataset.id));
   });
+
+  // Add Frequently Bought Together section
+  const fbtSection = document.createElement('div');
+  fbtSection.innerHTML = `
+    <div style="padding:20px 20px 0; border-top:1px solid #e8e5e0; margin-top:8px;">
+      <div style="font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#888; margin-bottom:14px; font-family:Inter,sans-serif;">Frequently Bought Together</div>
+      <div id="fbt-card" style="display:flex; align-items:center; gap:12px; border:1px solid #e8e5e0; border-radius:12px; padding:14px; background:white; cursor:pointer; transition:border-color 0.2s ease;">
+        <img src="assets/images/bpc-157.png" alt="BPC-157" style="width:64px; height:64px; object-fit:contain; border-radius:8px; background:#f8f7f5; flex-shrink:0;">
+        <div style="flex:1; min-width:0;">
+          <div style="font-size:13px; font-weight:500; color:#0f0f0f; font-family:Inter,sans-serif;">BPC-157</div>
+          <div style="font-size:11px; color:#888; font-family:Inter,sans-serif; margin-top:1px;">Regenerative Peptide</div>
+          <div style="font-size:12px; font-weight:500; color:#0f0f0f; font-family:Inter,sans-serif; margin-top:4px;">R450.00</div>
+        </div>
+        <button id="fbt-add-btn" onclick="addFBTToCart()" style="height:32px; padding:0 16px; border-radius:999px; background:#0f0f0f; color:white; font-size:11px; font-weight:500; letter-spacing:0.06em; border:none; cursor:pointer; font-family:Inter,sans-serif; white-space:nowrap; transition:background 0.2s ease; flex-shrink:0;">+ Add</button>
+      </div>
+    </div>
+  `;
+  cartItemsContainer.appendChild(fbtSection);
 }
 
 function updateBadge() {
@@ -174,7 +186,7 @@ function updateShippingBar() {
     shippingAmount.textContent = 'Free shipping unlocked!';
   } else {
     const remaining = (FREE_SHIPPING_THRESHOLD - subtotal).toFixed(2);
-    shippingAmount.textContent = `$${remaining} away`;
+    shippingAmount.textContent = `R${remaining} away`;
   }
 }
 
@@ -246,6 +258,42 @@ function attachAddToCartListeners() {
       });
     });
   });
+}
+
+// ── Frequently Bought Together ────────────────────────────────────────────
+function addFBTToCart() {
+  const btn = document.getElementById('fbt-add-btn');
+  const card = document.getElementById('fbt-card');
+  btn.textContent = '✓ Added';
+  btn.style.background = '#1a7a4a';
+  card.style.borderColor = '#1a7a4a';
+  btn.disabled = true;
+
+  // Add BPC-157 to cart
+  addToCart({
+    id: 'bpc-157',
+    name: 'BPC-157',
+    variant: 'Research Grade',
+    price: 450,
+    image: 'assets/images/bpc-157.png'
+  });
+}
+
+// ── Subscribe Toggle ────────────────────────────────────────────────────────
+function toggleSubscribe() {
+  const checkbox = document.getElementById('subscribe-toggle');
+  const track = document.getElementById('toggle-track');
+  const thumb = document.getElementById('toggle-thumb');
+  const savings = document.getElementById('subscribe-savings');
+  if (checkbox.checked) {
+    track.style.background = '#0f0f0f';
+    thumb.style.transform = 'translateX(18px)';
+    savings.style.display = 'block';
+  } else {
+    track.style.background = '#d0cec9';
+    thumb.style.transform = 'translateX(0)';
+    savings.style.display = 'none';
+  }
 }
 
 // ── Initialize on load ────────────────────────────────────────────

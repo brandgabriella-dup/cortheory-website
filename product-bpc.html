@@ -18,7 +18,7 @@
 <nav class="nav" id="nav">
   <div class="nav__inner">
     <a href="index.html" class="nav__logo">
-      <img src="assets/images/logo-black.png" alt="CorTheory" />
+      <img src="assets/images/cor logo white copy.png" alt="CorTheory" />
     </a>
     <ul class="nav__links">
       <li><a href="shop.html">Shop</a></li>
@@ -78,35 +78,114 @@
           <span class="product-detail__status">In Stock</span>
         </div>
 
-        <!-- Dosage Selector -->
-        <div class="product-detail__selector">
-          <label class="product-detail__selector-label">Select Dosage:</label>
-          <div class="product-detail__sizes">
-            <button class="product-detail__size active" data-size="5mg">5mg</button>
-            <button class="product-detail__size" data-size="10mg" disabled style="opacity: 0.5; cursor: not-allowed;">10mg (Out of Stock)</button>
+        <!-- Volume Tier Selector -->
+        <div style="display:flex; gap:10px; margin-bottom:16px;">
+          <div class="tier-card" data-tier="1" style="flex:1; border:1.5px solid #e8e5e0; border-radius:10px; padding:14px; cursor:pointer; background:white; text-align:center;">
+            <div style="font-size:11px; color:#888; margin-bottom:4px;">Buy 1</div>
+            <div style="font-size:14px; font-weight:500; color:#0f0f0f;">R 450.00</div>
+          </div>
+          <div class="tier-card selected" data-tier="2" style="flex:1; border:1.5px solid #0f0f0f; border-radius:10px; padding:14px; cursor:pointer; background:#f8f7f5; text-align:center; position:relative;">
+            <div style="position:absolute; top:-10px; left:50%; transform:translateX(-50%); background:#c4783a; color:white; font-size:9px; font-weight:600; letter-spacing:0.12em; border-radius:20px; padding:3px 10px; white-space:nowrap;">MOST POPULAR</div>
+            <div style="font-size:11px; color:#888; margin-bottom:4px;">Buy 2</div>
+            <div style="font-size:14px; font-weight:500; color:#0f0f0f;">R 828.00</div>
+            <div style="font-size:10px; color:#1a7a4a; margin-top:3px;">8% off</div>
+          </div>
+          <div class="tier-card" data-tier="3" style="flex:1; border:1.5px solid #e8e5e0; border-radius:10px; padding:14px; cursor:pointer; background:white; text-align:center;">
+            <div style="font-size:11px; color:#888; margin-bottom:4px;">Buy 3+</div>
+            <div style="font-size:14px; font-weight:500; color:#0f0f0f;">R 1,147.50</div>
+            <div style="font-size:10px; color:#1a7a4a; margin-top:3px;">15% off</div>
+            <div style="font-size:10px; color:#c4783a; margin-top:2px;">Free Shipping</div>
           </div>
         </div>
 
-        <!-- Subscription Options -->
-        <div class="product-detail__subscription">
-          <label class="product-detail__sub-label">
-            <input type="radio" name="subscription" value="once" checked />
-            <span>One-Time Purchase</span>
+        <!-- Subscription Cards -->
+        <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
+
+          <label style="display:flex; align-items:center; gap:12px; border:1.5px solid #e8e5e0; border-radius:10px; padding:16px; cursor:pointer; background:white;">
+            <input type="radio" name="purchase-type" value="one-time" checked style="width:16px; height:16px; accent-color:#0f0f0f;">
+            <span style="font-size:13px; font-weight:500; color:#0f0f0f;">One-Time Purchase</span>
           </label>
-          <label class="product-detail__sub-label">
-            <input type="radio" name="subscription" value="monthly" />
-            <span>Monthly Subscription (10% off)</span>
+
+          <label style="display:flex; align-items:center; gap:12px; border:1.5px solid #0f0f0f; border-radius:10px; padding:16px; cursor:pointer; background:#0f0f0f; position:relative;">
+            <div style="position:absolute; top:-10px; right:16px; background:#c4783a; color:white; font-size:9px; font-weight:600; letter-spacing:0.12em; border-radius:20px; padding:3px 10px; white-space:nowrap;">RECOMMENDED</div>
+            <input type="radio" name="purchase-type" value="subscribe" style="width:16px; height:16px; accent-color:#c4783a;">
+            <div>
+              <div style="font-size:13px; font-weight:500; color:white;">Subscribe & Save</div>
+              <div style="font-size:11px; color:#888; margin-top:2px;">Save R45.00 per order · Cancel anytime</div>
+            </div>
           </label>
+
         </div>
 
-        <!-- Add to Cart -->
-        <button class="btn btn-dark product-detail__add-btn" data-cart data-product-id="bpc-157">
-          Add to Cart
+        <!-- Trust Strip -->
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+
+          <div style="display:flex; align-items:center; gap:6px; background:#f8f7f5; border-radius:8px; padding:10px 14px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f0f0f" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span style="font-size:11px; color:#0f0f0f; white-space:nowrap;">99%+ Purity</span>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:6px; background:#f8f7f5; border-radius:8px; padding:10px 14px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f0f0f" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+            <span style="font-size:11px; color:#0f0f0f; white-space:nowrap;">HPLC Verified</span>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:6px; background:#f8f7f5; border-radius:8px; padding:10px 14px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f0f0f" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            <span style="font-size:11px; color:#0f0f0f; white-space:nowrap;">Lyophilised</span>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:6px; background:#f8f7f5; border-radius:8px; padding:10px 14px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f0f0f" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span style="font-size:11px; color:#0f0f0f; white-space:nowrap;">COA Available</span>
+          </div>
+
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button id="atc-btn" style="width:100%; height:56px; background:#0f0f0f; color:white; font-family:Inter,sans-serif; font-weight:500; font-size:13px; letter-spacing:0.08em; border-radius:8px; border:none; cursor:pointer; transition:background 0.2s ease; margin-bottom:16px;">
+          ADD TO CART
         </button>
+
+        <script>
+        document.getElementById('atc-btn').addEventListener('click', function(e) {
+          e.preventDefault();
+
+          // Add to cart
+          addToCart({
+            id: 'bpc-157',
+            name: 'BPC-157',
+            variant: 'Regenerative Peptide',
+            price: 450,
+            image: 'assets/images/bpc-157.png'
+          });
+
+          // Show confirmation animation
+          this.textContent = 'Added to Cart ✓';
+          this.style.background = '#1a7a4a';
+          const btn = this;
+          setTimeout(() => {
+            btn.textContent = 'ADD TO CART';
+            btn.style.background = '#0f0f0f';
+          }, 1800);
+        });
+        </script>
 
         <!-- Included -->
         <div style="padding: 16px 20px; background: #f0ede6; border-radius: 8px; margin-bottom: 32px;">
           <p style="font-size: 13px; color: var(--dark); margin: 0;"><strong>Includes:</strong> 3ml Bacteriostatic Water</p>
+        </div>
+
+        <!-- COA Card -->
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#f8f7f5; border:1px solid #e8e5e0; border-radius:12px; padding:20px 24px; margin-bottom:24px; margin-top:16px;">
+          <div style="display:flex; align-items:center; gap:14px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f0f0f" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div style="font-size:13px; font-weight:500; color:#0f0f0f; font-family:Inter,sans-serif;">Certificate of Analysis</div>
+              <div style="font-size:11px; color:#888; margin-top:2px; font-family:Inter,sans-serif;">Batch verified · HPLC & mass spectrometry</div>
+            </div>
+          </div>
+          <a href="#" style="font-size:11px; font-weight:500; color:#0f0f0f; border:1px solid #0f0f0f; border-radius:6px; padding:8px 16px; text-decoration:none; white-space:nowrap; font-family:Inter,sans-serif;">View COA →</a>
         </div>
 
         <!-- Health Benefits -->
@@ -141,6 +220,51 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Frequently Bought Together -->
+    <div style="padding-top:48px; margin-top:48px; border-top:1px solid #e8e5e0;">
+      <div style="font-family:Inter,sans-serif; font-weight:500; font-size:16px; color:#0f0f0f; margin-bottom:16px;">Frequently Bought Together</div>
+
+      <div style="display:flex; gap:12px;">
+
+        <div style="flex:1; display:flex; align-items:center; justify-content:space-between; gap:12px; border:1px solid #e8e5e0; border-radius:10px; padding:14px; background:white;">
+          <div style="display:flex; align-items:center; gap:12px; min-width:0;">
+            <img src="assets/images/recolour-blue-strips-2.png" alt="TB-500" style="width:80px; height:80px; object-fit:contain; border-radius:8px; background:#f8f7f5; flex-shrink:0;">
+            <div style="min-width:0;">
+              <div style="font-size:13px; font-weight:500; color:#0f0f0f; font-family:Inter,sans-serif;">TB-500</div>
+              <div style="font-size:11px; color:#888; font-family:Inter,sans-serif;">Recovery Peptide</div>
+              <div style="font-size:13px; font-weight:500; color:#0f0f0f; margin-top:4px; font-family:Inter,sans-serif; white-space:nowrap;">R 500.00</div>
+            </div>
+          </div>
+          <button onclick="this.style.background='#1a7a4a'; setTimeout(()=>this.style.background='#0f0f0f',1500)" style="width:32px; height:32px; border-radius:50%; background:#0f0f0f; color:white; font-size:18px; border:none; cursor:pointer; flex-shrink:0; display:flex; align-items:center; justify-content:center; line-height:1; transition:background 0.2s ease;">+</button>
+        </div>
+
+        <div style="flex:1; display:flex; align-items:center; justify-content:space-between; gap:12px; border:1px solid #e8e5e0; border-radius:10px; padding:14px; background:white;">
+          <div style="display:flex; align-items:center; gap:12px; min-width:0;">
+            <img src="assets/images/reta-new.png" alt="RETA" style="width:80px; height:80px; object-fit:contain; border-radius:8px; background:#f8f7f5; flex-shrink:0;">
+            <div style="min-width:0;">
+              <div style="font-size:13px; font-weight:500; color:#0f0f0f; font-family:Inter,sans-serif;">RETA</div>
+              <div style="font-size:11px; color:#888; font-family:Inter,sans-serif;">Metabolic Peptide</div>
+              <div style="font-size:13px; font-weight:500; color:#0f0f0f; margin-top:4px; font-family:Inter,sans-serif; white-space:nowrap;">R 1,005.00</div>
+            </div>
+          </div>
+          <button onclick="this.style.background='#1a7a4a'; setTimeout(()=>this.style.background='#0f0f0f',1500)" style="width:32px; height:32px; border-radius:50%; background:#0f0f0f; color:white; font-size:18px; border:none; cursor:pointer; flex-shrink:0; display:flex; align-items:center; justify-content:center; line-height:1; transition:background 0.2s ease;">+</button>
+        </div>
+
+        <div style="flex:1; display:flex; align-items:center; justify-content:space-between; gap:12px; border:1px solid #e8e5e0; border-radius:10px; padding:14px; background:white;">
+          <div style="display:flex; align-items:center; gap:12px; min-width:0;">
+            <img src="assets/images/ghk-cu.png" alt="GHK-Cu" style="width:80px; height:80px; object-fit:contain; border-radius:8px; background:#f8f7f5; flex-shrink:0;">
+            <div style="min-width:0;">
+              <div style="font-size:13px; font-weight:500; color:#0f0f0f; font-family:Inter,sans-serif;">GHK-Cu</div>
+              <div style="font-size:11px; color:#888; font-family:Inter,sans-serif;">Copper Peptide</div>
+              <div style="font-size:13px; font-weight:500; color:#0f0f0f; margin-top:4px; font-family:Inter,sans-serif; white-space:nowrap;">R 1,200.00</div>
+            </div>
+          </div>
+          <button onclick="this.style.background='#1a7a4a'; setTimeout(()=>this.style.background='#0f0f0f',1500)" style="width:32px; height:32px; border-radius:50%; background:#0f0f0f; color:white; font-size:18px; border:none; cursor:pointer; flex-shrink:0; display:flex; align-items:center; justify-content:center; line-height:1; transition:background 0.2s ease;">+</button>
+        </div>
+
       </div>
     </div>
   </div>
@@ -270,12 +394,104 @@
     <button class="cart-checkout__btn" id="proceedCheckout">
       PROCEED TO CHECKOUT
     </button>
+
+    <div style="margin:16px 20px 0; padding:16px; background:#f8f7f5; border-radius:12px; border:1px solid #e8e5e0;">
+      <label style="display:flex; align-items:flex-start; gap:12px; cursor:pointer;">
+        <div style="position:relative; flex-shrink:0; margin-top:2px;">
+          <input type="checkbox" id="subscribe-toggle" onchange="toggleSubscribe()" style="opacity:0; position:absolute; width:0; height:0;">
+          <div id="toggle-track" style="width:40px; height:22px; background:#d0cec9; border-radius:999px; transition:background 0.2s ease; position:relative;">
+            <div id="toggle-thumb" style="position:absolute; top:3px; left:3px; width:16px; height:16px; background:white; border-radius:50%; transition:transform 0.2s ease; box-shadow:0 1px 3px rgba(0,0,0,0.2);"></div>
+          </div>
+        </div>
+        <div style="flex:1;">
+          <div style="font-size:13px; font-weight:500; color:#0f0f0f; font-family:Inter,sans-serif;">Subscribe & Save 10%</div>
+          <div style="font-size:11px; color:#888; font-family:Inter,sans-serif; margin-top:2px; line-height:1.5;">Convert this order to a monthly subscription and save 10% on every delivery. Cancel anytime in 2 clicks.</div>
+          <div id="subscribe-savings" style="display:none; font-size:11px; color:#1a7a4a; font-family:Inter,sans-serif; margin-top:6px; font-weight:500;">✓ 10% discount applied — saving R50.00 per month</div>
+        </div>
+      </label>
+    </div>
+
     <p class="cart-checkout__disclaimer">
       By checking out, you agree to our Terms of Service.<br>
       Research Use Only.
     </p>
   </div>
 </div>
+
+<script>
+// Product detail page interactions
+document.addEventListener('DOMContentLoaded', function() {
+  // Volume tier selector
+  const tierCards = document.querySelectorAll('.product-detail__tier');
+  const priceDisplay = document.querySelector('.product-detail__price');
+  const basePrice = 450;
+
+  tierCards.forEach(card => {
+    card.addEventListener('click', function() {
+      tierCards.forEach(c => c.classList.remove('selected'));
+      this.classList.add('selected');
+
+      const tier = parseInt(this.dataset.tier);
+      const discount = tier === 1 ? 0 : tier === 2 ? 0.08 : 0.15;
+      const newPrice = basePrice * tier * (1 - discount);
+      priceDisplay.textContent = 'R ' + newPrice.toFixed(2);
+    });
+  });
+
+  // Subscription selector
+  const purchaseOptions = document.querySelectorAll('.product-detail__purchase-option');
+  purchaseOptions.forEach(option => {
+    option.addEventListener('click', function() {
+      purchaseOptions.forEach(o => o.classList.remove('selected'));
+      this.classList.add('selected');
+
+      const confirmation = this.querySelector('.product-detail__purchase-confirmation');
+      if (this.dataset.purchase === 'subscribe') {
+        if (!confirmation) {
+          const confirmDiv = document.createElement('div');
+          confirmDiv.className = 'product-detail__purchase-confirmation';
+          confirmDiv.textContent = '✓ Discount applied at checkout';
+          this.querySelector('.product-detail__purchase-text').appendChild(confirmDiv);
+        }
+      } else {
+        if (confirmation) confirmation.remove();
+      }
+    });
+  });
+
+  // Add to cart button animation
+  const addBtn = document.querySelector('.product-detail__add-btn');
+  if (addBtn) {
+    addBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const originalText = 'ADD TO CART';
+      this.textContent = 'Added to Cart ✓';
+      this.classList.add('added');
+
+      setTimeout(() => {
+        this.textContent = originalText;
+        this.classList.remove('added');
+      }, 1800);
+    });
+  }
+
+  // Pipeline button animations
+  const pipelineBtns = document.querySelectorAll('.product-detail__pipeline-btn');
+  pipelineBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const originalText = '+';
+      this.textContent = '✓';
+      this.classList.add('added');
+
+      setTimeout(() => {
+        this.textContent = originalText;
+        this.classList.remove('added');
+      }, 1800);
+    });
+  });
+});
+</script>
 
 <script src="assets/js/main.js"></script>
 </body>
