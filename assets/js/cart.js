@@ -123,12 +123,10 @@ function renderCartItems() {
       <div class="cart-item__content">
         <div class="cart-item__name">${item.name}</div>
         <div class="cart-item__variant">${item.variant}</div>
-        <div class="cart-item__stepper" data-id="${item.id}">
-          <div style="display:inline-flex; align-items:center; border:1px solid #e8e5e0; border-radius:999px; overflow:hidden; height:36px;">
-            <button onclick="updateQuantity('${item.id}', -1)" style="width:36px; height:36px; background:white; border:none; cursor:pointer; font-size:16px; color:#0f0f0f; display:flex; align-items:center; justify-content:center; flex-shrink:0;">−</button>
-            <span class="qty-display-${item.id}" style="min-width:24px; text-align:center; font-size:13px; font-weight:500; color:#0f0f0f; font-family:Inter,sans-serif;">${item.quantity}</span>
-            <button onclick="updateQuantity('${item.id}', 1)" style="width:36px; height:36px; background:white; border:none; cursor:pointer; font-size:16px; color:#0f0f0f; display:flex; align-items:center; justify-content:center; flex-shrink:0;">+</button>
-          </div>
+        <div style="display:flex; align-items:center; border:1px solid #e8e5e0; border-radius:999px; overflow:hidden; height:36px; width:fit-content; margin-top:4px;">
+          <button onclick="updateQuantity('${item.id}', -1)" style="width:36px; height:36px; background:white; border:none; cursor:pointer; font-size:16px; color:#0f0f0f; display:flex; align-items:center; justify-content:center; flex-shrink:0; padding:0;">−</button>
+          <span class="qty-display-${item.id}" style="width:24px; text-align:center; font-size:13px; font-weight:500; color:#0f0f0f; font-family:Inter,sans-serif;">${item.quantity}</span>
+          <button onclick="updateQuantity('${item.id}', 1)" style="width:36px; height:36px; background:white; border:none; cursor:pointer; font-size:16px; color:#0f0f0f; display:flex; align-items:center; justify-content:center; flex-shrink:0; padding:0;">+</button>
         </div>
       </div>
       <span class="cart-item__price">R${(item.price * item.quantity).toFixed(2)}</span>
